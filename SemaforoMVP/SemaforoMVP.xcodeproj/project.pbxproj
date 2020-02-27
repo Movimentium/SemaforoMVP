@@ -13,6 +13,9 @@
 		0C3D5EEB24082239008EB2B7 /* SemaforoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D5EEA24082239008EB2B7 /* SemaforoVC.swift */; };
 		0C3D5EED2408224E008EB2B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D5EEC2408224E008EB2B7 /* LaunchScreen.storyboard */; };
 		0C3D5EF0240822C2008EB2B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D5EEF240822C2008EB2B7 /* Main.storyboard */; };
+		0C3D5EF524082501008EB2B7 /* SemaforoDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D5EF424082501008EB2B7 /* SemaforoDS.swift */; };
+		0C3D5EF724082592008EB2B7 /* SemaforoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D5EF624082592008EB2B7 /* SemaforoModel.swift */; };
+		0C3D5EF924082C9C008EB2B7 /* SemaforPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D5EF824082C9C008EB2B7 /* SemaforPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		0C3D5EEA24082239008EB2B7 /* SemaforoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforoVC.swift; sourceTree = "<group>"; };
 		0C3D5EEC2408224E008EB2B7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C3D5EEF240822C2008EB2B7 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0C3D5EF424082501008EB2B7 /* SemaforoDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforoDS.swift; sourceTree = "<group>"; };
+		0C3D5EF624082592008EB2B7 /* SemaforoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforoModel.swift; sourceTree = "<group>"; };
+		0C3D5EF824082C9C008EB2B7 /* SemaforPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemaforPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				0C3D5ED62408213D008EB2B7 /* AppDelegate.swift */,
 				0C3D5ED82408213D008EB2B7 /* SceneDelegate.swift */,
+				0C3D5EF124082455008EB2B7 /* DataSource */,
+				0C3D5EF224082471008EB2B7 /* Models */,
 				0C3D5EEE24082256008EB2B7 /* Views */,
+				0C3D5EF324082479008EB2B7 /* Presenters */,
 				0C3D5EDF2408213E008EB2B7 /* Assets.xcassets */,
 				0C3D5EE42408213E008EB2B7 /* Info.plist */,
 			);
@@ -73,6 +82,30 @@
 				0C3D5EEC2408224E008EB2B7 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0C3D5EF124082455008EB2B7 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0C3D5EF424082501008EB2B7 /* SemaforoDS.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		0C3D5EF224082471008EB2B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C3D5EF624082592008EB2B7 /* SemaforoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0C3D5EF324082479008EB2B7 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				0C3D5EF824082C9C008EB2B7 /* SemaforPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +181,9 @@
 			files = (
 				0C3D5ED72408213D008EB2B7 /* AppDelegate.swift in Sources */,
 				0C3D5ED92408213D008EB2B7 /* SceneDelegate.swift in Sources */,
+				0C3D5EF724082592008EB2B7 /* SemaforoModel.swift in Sources */,
+				0C3D5EF524082501008EB2B7 /* SemaforoDS.swift in Sources */,
+				0C3D5EF924082C9C008EB2B7 /* SemaforPresenter.swift in Sources */,
 				0C3D5EEB24082239008EB2B7 /* SemaforoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

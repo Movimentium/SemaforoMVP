@@ -14,9 +14,71 @@
                     <view key="view" contentMode="scaleToFill" id="6Sv-hu-sv9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ePo-xY-vxd">
+                                <rect key="frame" x="135" y="60" width="50" height="174"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WR-n5-ANl">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="8WR-n5-ANl" secondAttribute="height" multiplier="1:1" id="Dyj-ff-eVj"/>
+                                            <constraint firstAttribute="height" constant="50" id="Icn-sO-7FV"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onBtnRojo" destination="PvI-gs-VJl" eventType="touchUpInside" id="yVT-y0-O1k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f09-tJ-N77">
+                                        <rect key="frame" x="0.0" y="62" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="f09-tJ-N77" secondAttribute="height" multiplier="1:1" id="w2b-ch-Y00"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onBtnNaranja" destination="PvI-gs-VJl" eventType="touchUpInside" id="rGC-I1-QuE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6K-q9-xgf">
+                                        <rect key="frame" x="0.0" y="124" width="50" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="R6K-q9-xgf" secondAttribute="height" multiplier="1:1" id="Hl6-57-FCl"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="onBtnVerde" destination="PvI-gs-VJl" eventType="touchUpInside" id="VON-WV-MVT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="R6K-q9-xgf" firstAttribute="height" secondItem="f09-tJ-N77" secondAttribute="height" id="Wef-nt-STy"/>
+                                    <constraint firstItem="f09-tJ-N77" firstAttribute="height" secondItem="8WR-n5-ANl" secondAttribute="height" id="elv-8L-qzJ"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lblDescrp" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gru-aE-DMf">
+                                <rect key="frame" x="16" y="294" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gru-aE-DMf" firstAttribute="leading" secondItem="kuo-jE-VDR" secondAttribute="leading" constant="16" id="MYF-e6-Z9z"/>
+                            <constraint firstItem="Gru-aE-DMf" firstAttribute="top" secondItem="R6K-q9-xgf" secondAttribute="bottom" constant="60" id="c0S-AW-NQU"/>
+                            <constraint firstItem="ePo-xY-vxd" firstAttribute="top" secondItem="kuo-jE-VDR" secondAttribute="top" constant="60" id="d0X-hn-x5h"/>
+                            <constraint firstItem="ePo-xY-vxd" firstAttribute="centerX" secondItem="6Sv-hu-sv9" secondAttribute="centerX" id="mdu-l1-Nkb"/>
+                            <constraint firstItem="kuo-jE-VDR" firstAttribute="trailing" secondItem="Gru-aE-DMf" secondAttribute="trailing" constant="16" id="rCy-iE-zEJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kuo-jE-VDR"/>
                     </view>
+                    <connections>
+                        <outlet property="constrSemaBtnHeight" destination="Icn-sO-7FV" id="KwH-iy-mps"/>
+                        <outlet property="lblDescrp" destination="Gru-aE-DMf" id="Nd1-FA-2GC"/>
+                        <outletCollection property="arrSemaforoBtns" destination="8WR-n5-ANl" collectionClass="NSMutableArray" id="2Va-6P-PVX"/>
+                        <outletCollection property="arrSemaforoBtns" destination="f09-tJ-N77" collectionClass="NSMutableArray" id="EkL-dY-2me"/>
+                        <outletCollection property="arrSemaforoBtns" destination="R6K-q9-xgf" collectionClass="NSMutableArray" id="SMG-iH-yrP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9u8-Jb-bN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
